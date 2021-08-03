@@ -43,9 +43,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let sum = a + b + c,
-    mult = a*b*c;
-  return [sum,mult,`${a} and ${b} and ${c} sum to ${sum}.`,`The product of ${a} and ${b} and ${c} is ${mult}.`]
+
+  let sumNumber1 = sum(a,b)[0];
+  sumNumber1 = sum(sumNumber1,c)[0];
+
+  let  mult = multiply(a,b)[0];
+  mult= multiply(mult,c)[0];
+
+  return [sumNumber1,mult,`${a} and ${b} and ${c} sum to ${sumNumber1}.`,`The product of ${a} and ${b} and ${c} is ${mult}.`]
 }
 
 
@@ -125,7 +130,7 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
  
   
 
-   return[dynamicMulti ,`The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${dynamicMulti}.`];
+  return[dynamicMulti ,`The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${dynamicMulti}.`];
   
 }
 
